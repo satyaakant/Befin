@@ -22,13 +22,9 @@ export default function SiteHeader() {
             <span className="brand-logo" aria-hidden="true">
               <img src={LOGO_URL} alt="" />
             </span>
-            <span>
-              <div className="brand-title">Befin</div>
-              <div className="brand-sub">Financial learning, made simple</div>
-            </span>
           </Link>
 
-          <div className="nav-links" role="navigation">
+          <div className="nav-links" role="navigation" aria-label="Primary navigation">
             <Link
               href="/"
               className={isActive(pathname, "/") ? "is-active" : undefined}
@@ -60,14 +56,6 @@ export default function SiteHeader() {
           </div>
 
           <div className="nav-cta">
-            <a
-              className="button"
-              href="https://befin.in/contact"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Schedule a Consultation
-            </a>
             <Link className="button primary" href="/">
               Download Now
             </Link>
