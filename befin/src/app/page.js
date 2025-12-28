@@ -1,9 +1,11 @@
 import Link from "next/link";
 import ClientEffects from "@/components/ClientEffects";
+import HomeLoader from "@/components/HomeLoader";
 
 export default function Home() {
   return (
     <>
+      <HomeLoader />
       <ClientEffects />
       <section className="hero">
         <div className="container">
@@ -12,10 +14,10 @@ export default function Home() {
               <span className="badge">
                 <span className="badge-dot" aria-hidden="true" /> Get Early Access
               </span>
-              <h1 className="h1">Make money learning feel effortless — and actually stick.</h1>
+              <h1 className="h1">Earning young trust. Building lifelong money habits.</h1>
               <p className="lead">
-                Befin is building a modern financial learning experience designed for kids, parents, and
-                educators — with a business-grade product feel and delightful interactions.
+                Befin is an AI-powered, gamified financial learning and investing platform for youth —
+                built with parents and schools in mind.
               </p>
 
               <div className="hero-actions">
@@ -38,23 +40,23 @@ export default function Home() {
                 <div className="kpi">
                   <div className="kpi-card">
                     <div className="kpi-title">Focus</div>
-                    <div className="kpi-value">Financial literacy</div>
-                    <div className="kpi-note">Fun and easy to understand</div>
+                    <div className="kpi-value">Youth fintech</div>
+                    <div className="kpi-note">Learning + goal setting + real investing</div>
                   </div>
                   <div className="kpi-card">
-                    <div className="kpi-title">Outcome</div>
-                    <div className="kpi-value">Better habits</div>
-                    <div className="kpi-note">Saving, spending, investing</div>
+                    <div className="kpi-title">Parents</div>
+                    <div className="kpi-value">Purposeful control</div>
+                    <div className="kpi-note">Guardian-linked, secure by design</div>
                   </div>
                   <div className="kpi-card">
-                    <div className="kpi-title">Audience</div>
-                    <div className="kpi-value">Families & schools</div>
-                    <div className="kpi-note">Learn together</div>
+                    <div className="kpi-title">Access</div>
+                    <div className="kpi-value">11+</div>
+                    <div className="kpi-note">Age-appropriate money learning</div>
                   </div>
                   <div className="kpi-card">
-                    <div className="kpi-title">Launch</div>
-                    <div className="kpi-value">Early access</div>
-                    <div className="kpi-note">Request a demo</div>
+                    <div className="kpi-title">CTA</div>
+                    <div className="kpi-value">Request a demo</div>
+                    <div className="kpi-note">Pilot with schools & partners</div>
                   </div>
                 </div>
               </div>
@@ -65,10 +67,11 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <h2 className="section-title reveal">Discover. Level up. Practice.</h2>
+          <h2 className="section-title reveal">What we’re solving</h2>
           <p className="section-sub reveal">
-            A clean, businessy experience with subtle motion — designed to keep attention without
-            feeling gimmicky.
+            India’s youth lack engaging, age-appropriate platforms to learn and practice financial
+            literacy. Parents want controlled, purposeful tools to help their children prepare for
+            real-world money management.
           </p>
 
           <div className="cards">
@@ -89,8 +92,8 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3>Learn with confidence</h3>
-              <p>Clear concepts that build real-world understanding.</p>
+              <h3>Why now?</h3>
+              <p>Massive smartphone and UPI adoption among youth.</p>
             </article>
 
             <article className="card reveal">
@@ -110,8 +113,8 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3>Simple progress</h3>
-              <p>Track skills and celebrate improvements.</p>
+              <h3>Why now?</h3>
+              <p>Guardian spending on education, sports, and hobbies is rising.</p>
             </article>
 
             <article className="card reveal">
@@ -131,9 +134,54 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3>Explore the simulator</h3>
-              <p>Practice money decisions in a safe environment.</p>
+              <h3>Why now?</h3>
+              <p>Regulatory & tech maturity to enable secure youth fintech.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title reveal">Why Us?</h2>
+          <p className="section-sub reveal">What makes Befin different and scalable.</p>
+
+          <div className="list reveal" aria-label="Why us">
+            <div className="item">
+              <div className="check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </div>
+              <div>
+                <strong>Unique blend of learning + goal-setting + real investing</strong>
+                <span>Not just content — a complete path from education to action.</span>
+              </div>
+            </div>
+
+            <div className="item">
+              <div className="check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </div>
+              <div>
+                <strong>High emotional connect with parents</strong>
+                <span>Purpose-based savings and guardian-linked controls.</span>
+              </div>
+            </div>
+
+            <div className="item">
+              <div className="check" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" />
+                </svg>
+              </div>
+              <div>
+                <strong>Affordable, scalable, and advertiser-friendly model</strong>
+                <span>Designed to grow sustainably across India.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -142,9 +190,9 @@ export default function Home() {
         <div className="container">
           <div className="split">
             <div className="reveal">
-              <h2 className="section-title">Get early access</h2>
+              <h2 className="section-title">Why we matter</h2>
               <p className="section-sub">
-                Want to collaborate, pilot, or integrate Befin in your school/community? Let’s talk.
+                Key benefits designed for youth — with peace of mind for guardians.
               </p>
               <div className="hero-actions">
                 <a
@@ -175,8 +223,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <strong>Make learning about money fun and easy for everyone</strong>
-                  <span>Short lessons, clear outcomes, modern design.</span>
+                  <strong>Guardian-linked investment system</strong>
+                  <span>Built for safety, oversight, and trust.</span>
                 </div>
               </div>
               <div className="item">
@@ -192,8 +240,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <strong>Make saving, spending, and investing simple</strong>
-                  <span>Build intuition with guided scenarios.</span>
+                  <strong>Learn-to-invest modules</strong>
+                  <span>Unlock real investing through educational progress.</span>
                 </div>
               </div>
               <div className="item">
@@ -209,8 +257,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <strong>Help parents and schools teach kids about money</strong>
-                  <span>Tools that support real conversations.</span>
+                  <strong>Goal-setting AI</strong>
+                  <span>Tracks real-life goals (school fees, camps, etc.).</span>
                 </div>
               </div>
               <div className="item">
@@ -226,8 +274,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <strong>Build good money habits and digital skills across India</strong>
-                  <span>Accessible and scalable for communities.</span>
+                  <strong>Wallet + rewards system</strong>
+                  <span>Monthly pocket money/top-ups, badges, and perks.</span>
                 </div>
               </div>
             </div>
