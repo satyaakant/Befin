@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Navbar({ activePage = 'home' }) {
   return (
     <nav className="sticky top-0 bg-white border-b border-gray-200 z-[1000] py-4">
-      <div className="max-w-9xl mx-auto px-8 flex items-center justify-between gap-8 flex-wrap">
+      <div className="max-w-10xl mx-auto px-8 flex items-center justify-between gap-8 flex-wrap">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline">
           <div className="flex items-center">
@@ -21,7 +21,7 @@ export default function Navbar({ activePage = 'home' }) {
         </Link>
 
         {/* Navigation Links */}
-        <div className="flex gap-8 items-center flex-1 justify-center order-3 md:order-none w-full md:w-auto pt-4 md:pt-0 border-t md:border-t-0 border-gray-200">
+        <div className="flex gap-8 items-center flex-1 justify-center order-3 md:order-none w-full md:w-auto pt-4 md:pt-0 border-t md:border-t-0 border-gray-200 text-nowrap">
           <Link href="/" className={`text-base font-medium transition-colors relative ${activePage === 'home' ? 'text-[#2563eb]' : 'text-gray-900 hover:text-[#2563eb]'}`}>
             {activePage === 'home' && <span className="absolute bottom-[-4px] left-0 right-0 h-0.5 bg-[#2563eb]"></span>}
             Home
@@ -41,7 +41,7 @@ export default function Navbar({ activePage = 'home' }) {
         </div>
 
         {/* Download Now Button */}
-        <button className="bg-gradient-to-r from-[#1173eb] to-[#1d4ed8] text-white border-none px-6 py-3 rounded-full text-base font-semibold cursor-pointer whitespace-nowrap">
+        <button className="bg-gradient-to-r from-[#1173eb] to-[#1d4ed8] text-white border-none px-4 py-2 rounded-full text-base font-semibold cursor-pointer whitespace-nowrap">
           Download Now
         </button>
       </div>
