@@ -17,7 +17,7 @@ export default function Navbar({ activePage = 'home' }) {
               className="rounded-[8px]"
             />
           </div>
-          <span className="text-3xl font-bold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">BeFin</span>
+          {/* <span className="text-3xl font-bold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">BeFin</span> */}
         </Link>
 
         {/* Navigation Links */}

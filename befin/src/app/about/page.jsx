@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -6,148 +8,152 @@ export default function AboutUs() {
     <>
       <Navbar activePage="about" />
       
-      {/* Hero Section - About Us */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Illustration */}
-            <div className="relative" data-aos="fade-right">
-              <div 
-                className="w-full h-[500px] rounded-2xl relative overflow-hidden shadow-2xl"
+      {/* About Us Intro Section */}
+      <section className="pb-16 md:pb-0 flex items-center bg-white">
+        <div className="w-full mx-auto lg:pe-4">
+          <div className="flex flex-col-reverse lg:flex-row items-center">
+            {/* Left Section - About Banner */}
+            <div
+              className="hidden lg:block w-full lg:w-1/2 flex items-center justify-center lg:justify-start relative min-h-[320px] sm:min-h-[400px] lg:min-h-[600px] mb-8 lg:mb-0"
+              data-aos="fade-right"
+            >
+              <div
+                className="relative w-[40vw] min-h-[40vw] sm:min-h-[60vw] lg:min-h-[75vh]"
                 style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)'
+                  maskImage: 'url(/left-transparent.svg)',
+                  WebkitMaskImage: 'url(/left-transparent.svg)',
+                  maskSize: '100% 100%',
+                  WebkitMaskSize: '100% 100%',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskPosition: 'left center',
+                  WebkitMaskPosition: 'left center'
                 }}
               >
-                {/* Wiggle right edge overlay - creates wavy edge on right side */}
-                <div 
-                  className="absolute right-0 top-0 bottom-0 w-20 pointer-events-none"
-                  style={{
-                    background: 'white',
-                    maskImage: 'url(/wiggle-right.svg)',
-                    WebkitMaskImage: 'url(/wiggle-right.svg)',
-                    maskSize: '100% 100%',
-                    WebkitMaskSize: '100% 100%',
-                    maskRepeat: 'no-repeat',
-                    WebkitMaskRepeat: 'no-repeat',
-                    maskPosition: 'left center',
-                    WebkitMaskPosition: 'left center'
-                  }}
-                ></div>
-                {/* Background Elements */}
-                <div className="absolute inset-0 p-8">
-                  {/* BeFin Branding */}
-                  <div className="absolute top-8 left-1/2 -translate-x-1/2">
-                    <h1 className="text-6xl font-bold text-white">Befin</h1>
-                  </div>
-                  
-                  {/* People Illustrations */}
-                  <div className="absolute bottom-20 left-8">
-                    <div className="text-6xl">👨‍💼</div>
-                  </div>
-                  <div className="absolute bottom-20 right-8">
-                    <div className="text-6xl">👩‍💼</div>
-                  </div>
-                  
-                  {/* Children with devices */}
-                  <div className="absolute top-32 left-12">
-                    <div className="bg-white rounded-lg p-2 shadow-lg">
-                      <div className="text-3xl">📱</div>
-                      <div className="text-xs text-gray-600 mt-1">888</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-40 right-16">
-                    <div className="bg-white rounded-lg p-2 shadow-lg">
-                      <div className="text-3xl">📱</div>
-                    </div>
-                  </div>
-                  
-                  {/* Laptop with chart */}
-                  <div className="absolute bottom-32 left-1/2 -translate-x-1/2">
-                    <div className="bg-white rounded-lg p-3 shadow-lg w-32">
-                      <div className="h-16 bg-gradient-to-t from-green-400 to-blue-500 rounded flex items-end justify-center">
-                        <div className="w-full h-3/4 bg-blue-600 rounded-t"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating text elements */}
-                  <div className="absolute top-48 left-20 text-white text-sm font-semibold opacity-80">Learn • Save</div>
-                  <div className="absolute top-56 right-24 text-white text-sm font-semibold opacity-80">Pay • Invest</div>
-                </div>
+                <Image
+                  src="/about/hero.png"
+                  alt="BeFin About"
+                  fill
+                  className="object-cover bg-white"
+                  priority
+                />
               </div>
             </div>
-
-            {/* Right Column - Text Content */}
-            <div className="flex flex-col gap-6" data-aos="fade-left">
-              <h1 className="text-5xl md:text-6xl font-bold text-[#2563eb]">About Us</h1>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p className="text-lg">
-                  At BeFin, we believe that financial independence is not a destination, but a journey that begins with the first step towards understanding money. Founded by <strong>CommHawk Technologies Pvt. Ltd.</strong>, BeFin was born from a vision to bridge the financial literacy gap in India and empower every individual, regardless of age or background.
-                </p>
-                <p className="text-lg">
-                  Our mission is simple yet powerful: to make financial education accessible, engaging, and practical for everyone. We understand that traditional financial education can be intimidating and disconnected from real-world needs. That's why we've built BeFin as a comprehensive platform that combines <strong>smart tools, gamified learning, and real-world financial experiences</strong>.
-                </p>
-                <p className="text-lg">
-                  Through BeFin, users can <strong>Learn • Save • Pay • Invest</strong> - all in one integrated ecosystem designed to grow with them from their first allowance to their first salary and beyond.
-                </p>
-              </div>
+            {/* Right Section - About Us Content */}
+            <div className="text-center lg:text-left my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[12vh]" data-aos="fade-left">
+              <h1 className="text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text mb-2">
+                Who are we ?
+              </h1>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl">
+                <span className="block mb-5">
+                  At <span className="font-semibold text-[#2563eb]">BeFin</span>, we believe that financial independence should belong to everyone at every age. We&apos;re on a mission to make managing money simple, fun, and empowering, from your first allowance to your first salary.
+                </span>
+                <span className="block lg:mb-5">
+                  Founded by <span className="font-semibold text-[#2563eb]">CommHawk Technologies Pvt. Ltd.</span>, BeFin bridges India&apos;s financial literacy gap with smart tools, gamified learning, and real-world financial experiences helping students, parents, and professionals <span className="font-semibold text-[#2563eb]">Learn • Save • Pay • Invest</span> with confidence.
+                </span>
+                <span className="hidden lg:block">
+                  Built for India&apos;s digital future and powered by trusted financial partners, BeFin combines innovation, education, and technology to shape a financially smarter generation.
+                </span>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Helping India Understand Money Section */}
-      <section className="py-20 bg-gray-50 relative overflow-hidden">
-        {/* Background text effect */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-5">
-          <span className="text-[200px] font-bold text-gray-400">HERE</span>
+      {/* Helping India Understand Money */}
+      <section className="pt-16 pb-14 relative overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/about/banner.png"
+            alt="Helping India Understand Money"
+            className="w-full h-full object-cover opacity-45"
+            draggable={false}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/90" />
         </div>
-        
-        <div className="max-w-[1200px] mx-auto px-8 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] text-center mb-6" data-aos="fade-up">Helping India Understand Money</h2>
-          <p className="text-lg md:text-xl text-gray-700 text-center max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            We're on a mission to transform how India learns about money. Through innovative technology, engaging content, and real-world applications, BeFin is making financial literacy accessible to millions.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Our Vision */}
-            <div className="bg-white p-8 rounded-2xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-              <h3 className="text-2xl font-bold text-[#2563eb] mb-6">Our Vision</h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To create a financially empowered India where every individual has the knowledge and tools to make informed financial decisions.</span>
+
+        <div className="relative z-10 mx-auto px-6 md:px-10">
+          {/* Header */}
+          <div className="text-left md:text-left mx-auto mb-10 flex flex-col items-start md:items-start">
+            <h2
+              className="text-4xl md:text-5xl font-semibold text-[#2563eb] mb-6 w-full text-center md:text-left"
+              data-aos="fade-up"
+            >
+              Helping India Understand Money
+            </h2>
+
+            <p
+              className="text-lg md:text-xl text-gray-700 leading-relaxed w-full text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              We&apos;re on a mission to transform how India learns about money. Through
+              innovative technology, engaging content, and real world applications,
+              BeFin is making financial literacy accessible to millions. &nbsp;
+              <span className="bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text font-semibold">
+                Learn • Save • Pay • Invest
+              </span>
+            </p>
+          </div>
+
+          {/* Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {/* Vision */}
+            <div data-aos="fade-up" data-aos-delay="200" className="text-left flex flex-col items-center md:items-start">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 w-full text-center md:text-left">
+                Our Vision
+              </h3>
+
+              <ul className="space-y-5 text-lg text-gray-700 leading-relaxed w-full">
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-[#2563eb]" />
+                  <span>
+                    To create a financially empowered India where every individual has
+                    the knowledge and tools to make informed financial decisions.
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To bridge the financial literacy gap and make financial education accessible to all, regardless of age, background, or economic status.</span>
+
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-[#2563eb]" />
+                  <span>
+                    To bridge the financial literacy gap and make financial education
+                    accessible to all, regardless of age, background, or economic
+                    status.
+                  </span>
                 </li>
               </ul>
             </div>
 
-            {/* Our Mission */}
-            <div className="bg-white p-8 rounded-2xl shadow-md relative" data-aos="fade-up" data-aos-delay="300">
-              <div className="absolute -top-3 -right-3 bg-white rounded-lg px-3 py-1 shadow-md text-xs text-gray-600 flex items-center gap-1">
-                Made with GAMMA
-                <span className="text-[#2563eb]">↓</span>
-              </div>
-              <h3 className="text-2xl font-bold text-[#2563eb] mb-6">Our Mission</h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To provide comprehensive financial education through innovative, gamified learning experiences.</span>
+            {/* Mission */}
+            <div data-aos="fade-up" data-aos-delay="300" className="relative text-left flex flex-col items-center md:items-start">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 w-full text-center md:text-left">
+                Our Mission
+              </h3>
+
+              <ul className="space-y-5 text-lg text-gray-700 leading-relaxed w-full">
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-[#2563eb]" />
+                  <span>
+                    Financial education through innovative,
+                    gamified learning experiences.
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To empower users with practical tools for saving, spending, and investing wisely.</span>
+
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-[#2563eb]" />
+                  <span>
+                    Empower users with practical tools for saving, spending, and
+                    investing wisely.
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To collaborate with educational institutions and financial partners to build financially aware communities.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#2563eb] mt-1">•</span>
-                  <span>To continuously innovate and adapt to the evolving needs of our users and the financial landscape.</span>
+
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 w-2 h-2 rounded-full bg-[#2563eb]" />
+                  <span>
+                    Collaborate with educational institutions and financial partners
+                    to build financially aware communities.
+                  </span>
                 </li>
               </ul>
             </div>
