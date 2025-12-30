@@ -197,7 +197,7 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            BeFin isn't just an app - it's your lifelong financial companion. Whether you're learning to manage your first pocket money or optimizing your salary, BeFin grows with you.
+            BeFin isn&apos;t just an app - it&apos;s your lifelong financial companion. Whether you&apos;re learning to manage your first pocket money or optimizing your salary, BeFin grows with you.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1 */}
@@ -225,25 +225,25 @@ export default function Home() {
                 <img
                   src="/home/parents.png"
                   alt="Parents icon"
-                  className="w-full h-full object-cover rounded-bl-xl"
+                  className="w-full h-full object-cover rounded-bl-full"
                   draggable="false"
                 />
               </div>
               <div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 mt-0 pr-12 md:pr-16">For <br /> <span className='text-3xl'>Parents</span></h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Set allowances, track spending, and guide your child's financial growth.
+                  Set allowances, track spending, and guide your child&apos;s financial growth.
                 </p>
               </div>
             </div>
             {/* Card 3 */}
-            <div className="bg-white p-6 sm:p-7 md:p-8 rounded-2xl relative shadow-md transition-all hover:-translate-y-2 hover:shadow-xl text-left flex flex-col justify-center min-h-[220px] md:min-h-[260px]" data-aos="fade-up" data-aos-delay="400">
+            <div className="bg-white p-6 sm:p-7 md:p-8 rounded-2xl relative shadow-md transition-all hover:-translate-y-2 hover:shadow-xl text-left flex flex-col justify-center min-h-[220px] md:min-h-[260px]" data-aos="fade-up" data-aos-delay="300">
               {/* Image Top Right */}
               <div className="absolute top-0 right-0 w-48 h-24 pointer-events-none select-none leading-[1]">
                 <img
                   src="/home/professionals.png"
                   alt="Professionals icon"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover rounded-bl-full"
                   draggable="false"
                 />
               </div>
@@ -475,7 +475,7 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row items-start">
                 <div className="flex-[2]">
                   <p className="text-2xl font-semibold text-[#2563eb] mb-2">
-                    Let's Build Something Extraordinary Together
+                    Let&apos;s Build Something Extraordinary Together
                   </p>
                   <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl">
                     BeFin offers perfect solutions for individuals, institutions, and enterprises seeking financial empowerment and innovation. Join thousands of users and leading financial partners who trust BeFin for exceptional financial education and services.
