@@ -72,7 +72,7 @@ const statData = [
 // Modified InfiniteVerticalStats for infinite scroll (looped animation)
 function InfiniteVerticalStats() {
   return (
-    <div className="relative h-[200px] flex flex-col justify-center items-center overflow-hidden w-full mt-8">
+    <div className="relative h-[200px] flex flex-col justify-center items-center overflow-hidden w-full mt-8 px-4 sm:px-0">
       <style>{`
         .vert-marquee-track {
           display: flex;
@@ -93,7 +93,7 @@ function InfiniteVerticalStats() {
           {[...statData, ...statData].map((stat, i) => (
             <div
               key={i}
-              className="text-center p-8 bg-gray-50 rounded-2xl shadow-md mb-6 last:mb-0 min-h-[120px] flex flex-col items-center justify-center w-[320px] sm:w-[350px] md:w-[450px] mx-auto"
+              className="text-center p-5 sm:p-8 bg-gray-50 rounded-2xl shadow-md mb-6 last:mb-0 min-h-[120px] flex flex-col items-center justify-center w-full max-w-[450px] mx-auto"
             >
               <div className="text-5xl md:text-6xl font-bold text-[#2563eb] mb-2">{stat.big}</div>
               <div className="text-xl font-semibold text-gray-900">{stat.title}</div>
@@ -143,14 +143,14 @@ export default function Home() {
               </div>
             </div>
             {/* Right Section - Marketing Content */}
-            <div className="text-center lg:text-left my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]" data-aos="fade-left">
+            <div className="text-center lg:text-left my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 sm:px-6 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]" data-aos="fade-left">
               <p className="text-lg lg:text-2xl text-[#2563eb] font-medium">
                 BeFin- Learn, Save, Pay & Invest
               </p>
               <h1 className="text-2xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">
                 Be Financially Independent
               </h1>
-              <p className="text-base text-md md:text-lg text-gray-700 leading-relaxed max-w-lg">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-lg">
                 From your first allowance to your first salary, BeFin helps every generation grow smarter with money.
               </p>
               
@@ -260,7 +260,7 @@ export default function Home() {
 
       {/* Smart Card Section as Banner */}
       <section
-        className="relative flex items-center justify-center py-32 overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] bg-[aliceblue]"
+        className="relative flex items-center justify-center py-16 sm:py-24 md:py-32 overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] bg-[aliceblue]"
         style={{
           background: "linear-gradient(120deg,#e0f2fe 10%,#dbeafe 100%)"
         }}
@@ -277,11 +277,11 @@ export default function Home() {
         </div>
         {/* TEXT CONTENT OVER IMAGE */}
         <div className="relative z-10 max-w-3xl w-full mx-auto px-5 sm:px-8 text-center" data-aos="fade-up">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#2563eb] drop-shadow-lg mb-5">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#2563eb] drop-shadow-lg mb-5">
             Smart Card
           </h2>
-          <p className="text-2xl sm:text-4xl font-semibold text-[#30a5fa] mb-3">Spend Smarter | Stay in Control</p>
-          <p className="text-lg sm:text-xl md:text-3xl text-gray-700 leading-relaxed mb-4">
+          <p className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#30a5fa] mb-3">Spend Smarter | Stay in Control</p>
+          <p className="text-base sm:text-xl md:text-3xl text-gray-700 leading-relaxed mb-4">
             Make everyday payments easy, safe and fun with your own &nbsp;
             <span className="bg-gradient-to-r from-[#30a5fa] via-[#2563eb] to-[#38bdf8] bg-clip-text text-transparent">
               BeFin Smart Card
@@ -289,7 +289,7 @@ export default function Home() {
             , built for all ages.
           </p>
           <p className="text-base sm:text-xl text-gray-800 font-medium mb-6">Track, Tap and Manage Effortlessly.</p>
-          <div className="flex gap-3 items-center text-base sm:text-lg justify-center text-[#2563eb] mb-8">
+          <div className="flex flex-wrap gap-3 items-center text-sm sm:text-lg justify-center text-[#2563eb] mb-8">
             <span className="font-medium">Secure</span>
             <span className="opacity-70">|</span>
             <span className="font-medium">Fast</span>
@@ -297,7 +297,7 @@ export default function Home() {
             <span className="font-medium">Prepaid</span>
           </div>
           <Link href="/services" passHref >
-            <button className="bg-[#2563eb] text-white px-5 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105 shadow-md border-none">
+            <button className="bg-[#2563eb] text-white px-5 py-3 rounded-full text-base sm:text-lg font-semibold transition-transform hover:scale-105 shadow-md border-none">
               Get your BeFin Card now →
             </button>
           </Link>
@@ -336,7 +336,7 @@ export default function Home() {
             </div>
             {/* Right Section - Marketing Content */}
             <div
-              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]"
+              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 sm:px-6 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]"
               data-aos="fade-up"
             >
               <p

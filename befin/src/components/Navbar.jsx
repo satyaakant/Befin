@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Navbar({ activePage = 'home' }) {
   return (
     <nav className="sticky top-0 bg-white border-b border-gray-200 z-[1000] py-4">
-      <div className="max-w-10xl mx-auto px-8 flex items-center justify-between gap-8 flex-wrap">
+      <div className="max-w-10xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-6 sm:gap-8 flex-wrap">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline">
           <div className="flex items-center">

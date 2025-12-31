@@ -99,7 +99,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="mx-auto px-8 relative z-20">
+        <div className="mx-auto px-4 sm:px-8 relative z-20">
           <div className="flex items-end justify-end">
 
             {/* Card Info */}
@@ -176,11 +176,11 @@ export default function Services() {
               </div>
             </div>
             {/* Right Section - New Marketing Content */}
-            <div className="text-center lg:text-left mb-4 w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-6 px-1 lg:max-w-full lg:-translate-x-[5vh]" data-aos="fade-up">
+            <div className="text-center lg:text-left mb-4 w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-6 px-4 sm:px-6 lg:px-0 lg:max-w-full lg:-translate-x-[5vh]" data-aos="fade-up">
               <h1 className="text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text mb-2">
                 Your Complete Financial Companion
               </h1>
-              <p className="text-base text-md md:text-lg text-gray-700 leading-relaxed max-w-xl" data-aos="fade-up">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-xl" data-aos="fade-up">
                 Whether you&apos;re a student, a parent, or a professional <br className='hidden md:block' /> <span className="font-semibold text-[#2563eb]">BeFin</span> makes managing money simple, fun, and truly empowering.
               </p>
               <Link href="/contact" passHref>
@@ -195,7 +195,7 @@ export default function Services() {
       
       {/* Learn • Save • Pay • Invest Section */}
       <section className="py-12 bg-[aliceblue]">
-        <div className="mx-auto px-8 max-w-9xl">
+        <div className="mx-auto px-4 sm:px-8 max-w-9xl">
           <h2
             className="text-4xl md:text-5xl font-bold pb-6 bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text"
             data-aos="fade-up"
@@ -284,7 +284,7 @@ export default function Services() {
       
       {/* how befin works */}
       <section>
-        <div className="max-w-9xl mx-auto px-8 pt-14 overflow-hidden" data-aos="fade-up">
+        <div className="max-w-9xl mx-auto px-4 sm:px-8 pt-14 overflow-hidden" data-aos="fade-up">
           <h2 className="text-3xl md:text-5xl mb-2 text-right flex items-center justify-end" data-aos="fade-up">
             <span className="inline-block align-middle mr-2" aria-hidden="true">←</span>
             <span
@@ -359,7 +359,7 @@ export default function Services() {
               className="flex justify-center items-center relative"
               data-aos="fade-up"
             >
-              <div className="relative w-full h-[400px]">
+              <div className="relative w-full h-[260px] sm:h-[320px] md:h-[400px]">
                 <Image
                   src="/services/befin-works.png"
                   alt="befin"
@@ -405,7 +405,7 @@ export default function Services() {
 
             {/* Right Section - Features List with Icons */}
             <div
-              className="my-4 w-full lg:w-2/3 flex flex-col items-center lg:items-start px-1 lg:px-4 lg:max-w-full"
+              className="my-4 w-full lg:w-2/3 flex flex-col items-center lg:items-start px-4 sm:px-6 lg:px-4 lg:max-w-full"
               data-aos="fade-up"
             >
               <p className="text-lg lg:text-2xl text-[#2563eb] font-medium" data-aos="fade-up">
