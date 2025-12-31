@@ -1,13 +1,86 @@
-import Link from 'next/link';
+"use client";
+
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+// Partner logo mapping
+const partnerLogos = {
+  "NPCI": "/about/npci.webp",
+  "Yes Bank": "/about/yesbank.png",
+  "Invertis University": "/about/invertis.jpg",
+};
+
+function PartnerMarquee() {
+  const partners = [
+    {
+      name: "NPCI",
+      style: "text-[#2563eb] font-bold",
+      logo: partnerLogos["NPCI"],
+      logoAlt: "NPCI Logo"
+    },
+    {
+      name: "Yes Bank",
+      style: "text-[#1a237e] font-bold",
+      logo: partnerLogos["Yes Bank"],
+      logoAlt: "Yes Bank Logo"
+    },
+    {
+      name: "Invertis University",
+      style: "text-green-800 font-bold",
+      logo: partnerLogos["Invertis University"],
+      logoAlt: "Invertis University Logo"
+    },
+  ];
+
+  return (
+    <div className="w-full overflow-x-hidden py-2 mb-8">
+      <div className="relative">
+        <div className="partner-marquee-track flex gap-24 text-2xl md:text-3xl items-center whitespace-nowrap font-semibold select-none">
+          {Array.from({ length: 6 }).map((_, loopIndex) =>
+            partners.map((partner, idx) => (
+              <span key={`marquee-${loopIndex}-${idx}`} className={`flex items-center gap-3 ${partner.style}`}>
+                {/* Show logo in front of name. Uses next/image for optimal loading. Fallback to <img> if needed. */}
+                {partner.logo ? (
+                  <span className="inline-block w-20 h-10 align-middle relative">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.logoAlt}
+                      fill
+                      className="bg-white object-cover"
+                      draggable={false}
+                    />
+                  </span>
+                ) : (
+                  <span className="inline-block w-9 h-9 md:w-11 md:h-11 align-middle rounded-full bg-gray-200" />
+                )}
+                <span>{partner.name}</span>
+              </span>
+            ))
+          )}
+        </div>
+        <style jsx global>{`
+          @keyframes infinite-marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+
+          .partner-marquee-track {
+            animation: infinite-marquee 30s linear infinite;
+            min-width: max-content;
+            will-change: transform;
+          }
+        `}</style>
+      </div>
+    </div>
+  );
+}
 
 export default function AboutUs() {
   return (
     <>
       <Navbar activePage="about" />
-      
+
       {/* About Us Intro Section */}
       <section className="pb-16 md:pb-0 flex items-center bg-white">
         <div className="w-full mx-auto lg:pe-4">
@@ -160,19 +233,32 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-
-      {/* Our Team & Trusted Partners Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] text-center mb-12" data-aos="fade-up">Our Team & Trusted Partners</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      {/* Our Team & Trusted Financial Partners Section */}
+      <section className="py-20 bg-white relative">
+        <div className="mx-auto px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-2 text-center md:text-left" data-aos="fade-up">
+            Meet the Team & Trusted Partners
+          </h2>
+          <p className="text-lg text-gray-700 mx-auto mb-10 text-center md:text-left mb-12" data-aos="fade-up" data-aos-delay="100">
+            BeFin is powered by a passionate, multidisciplinary team and guided by industry leaders in the fintech and education domains. <br className='hidden md:block' /> Our trusted financial and educational partners help us deliver top-tier financial education and real-world solutions to learners and families across India.
+          </p>
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Founder & CEO */}
-            <div className="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white" style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-                <div className="w-full h-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
-                  <div className="text-6xl">👩‍💼</div>
-                </div>
+              <div className="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+              <div
+                className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white relative"
+                style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
+              >
+                <Image
+                  src="/about/surbhi.jpg"
+                  alt="Surbhi Kansal"
+                  fill
+                  className="object-cover rounded-full"
+                  draggable={false}
+                  priority
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Founder & CEO</h3>
               <p className="text-lg font-semibold text-gray-700 mb-1">Surbhi Kansal</p>
@@ -181,70 +267,55 @@ export default function AboutUs() {
 
             {/* Advisory Board */}
             <div className="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white" style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-                <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                  <div className="text-6xl">👥</div>
-                </div>
+              <div
+                className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white relative"
+                style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
+              >
+                <Image
+                  src="/about/advisory.jpg"
+                  alt="Advisory Board"
+                  fill
+                  className="object-cover rounded-full"
+                  draggable={false}
+                  sizes="192px"
+                  priority
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Advisory Board</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Industry leaders from the Fintech & Education ecosystem guiding our vision.</p>
+              <p className="text-lg text-gray-600 max-w-md leading-relaxed">
+                Industry leaders from the Fintech & Education ecosystem guiding our vision.
+              </p>
             </div>
 
             {/* Our Team */}
             <div className="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white" style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center">
-                  <div className="text-6xl">👨‍👩‍👧‍👦</div>
-                </div>
+              <div
+                className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white relative"
+                style={{ boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}
+              >
+                <Image
+                  src="/about/team.jpg"
+                  alt="BeFin Team"
+                  fill
+                  className="object-cover rounded-full"
+                  draggable={false}
+                  sizes="192px"
+                  priority
+                />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Our Team</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Passionate innovators, educators, and fintech professionals united by one goal.</p>
+              <p className="text-lg text-gray-600  max-w-md leading-relaxed">
+                Passionate innovators, educators, and fintech professionals united by one goal.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Trusted Financial & Educational Partners Section */}
-      <section className="py-20 bg-gray-50 relative">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] text-center mb-12" data-aos="fade-up">Trusted Financial & Educational Partners</h2>
-          
-          {/* Partner Logos */}
-          <div className="flex flex-wrap justify-center items-center gap-12 mb-8" data-aos="fade-up" data-aos-delay="100">
-            {/* Logo 1 - Stylized W */}
-            <div className="w-32 h-32 bg-gradient-to-br from-pink-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-5xl font-bold text-white">W</span>
-            </div>
-            
-            {/* Logo 2 - NPCI */}
-            <div className="w-32 h-32 bg-white rounded-xl flex items-center justify-center shadow-lg border-2 border-gray-200">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#2563eb]">NPCI</div>
-                <div className="text-xs text-gray-600 mt-1">National Payments</div>
-                <div className="text-xs text-gray-600">Corporation of India</div>
-              </div>
-            </div>
-            
-            {/* Logo 3 - Building/Institution */}
-            <div className="w-32 h-32 bg-gradient-to-br from-gray-300 to-gray-500 rounded-xl flex items-center justify-center shadow-lg">
-              <div className="text-5xl">🏛️</div>
-            </div>
-          </div>
-          
+          {/* Infinite Text Marquee */}
+          <PartnerMarquee />
+
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
             We are proud to collaborate with leading financial institutions and educational organizations across India. These partnerships enable us to deliver comprehensive financial education and innovative payment solutions to millions of users nationwide.
           </p>
-        </div>
-        
-        {/* Small logo in bottom left */}
-        <div className="absolute bottom-8 left-8">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" rx="8" fill="#2563eb"/>
-            <text x="20" y="28" fontSize="24" fontWeight="bold" fill="white" textAnchor="middle" fontFamily="system-ui">B</text>
-            <circle cx="12" cy="10" r="2" fill="white"/>
-            <circle cx="20" cy="10" r="2" fill="white"/>
-            <circle cx="28" cy="10" r="2" fill="white"/>
-          </svg>
         </div>
       </section>
 

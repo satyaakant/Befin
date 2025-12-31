@@ -121,7 +121,7 @@ export default function Home() {
               data-aos="fade-right"
             >
               <div
-                className="relative w-[40vw] min-h-[40vw] sm:min-h-[60vw] lg:min-h-[85vh]"
+                className="relative w-[40vw] min-h-[40vw] sm:min-h-[60vw] lg:min-h-[95vh]"
                 style={{
                   maskImage: 'url(/left-transparent.svg)',
                   WebkitMaskImage: 'url(/left-transparent.svg)',
@@ -169,7 +169,7 @@ export default function Home() {
               
               {/* Video Section */}
               <div className="mt-4 sm:mt-10">
-                <div className="rounded-xl overflow-hidden shadow-lg aspect-video w-full max-w-2xl min-h-[200px] md:min-h-[300px]">
+                <div className="rounded-xl overflow-hidden shadow-lg aspect-video w-full max-w-2xl min-h-[200px] md:min-h-[350px]">
                   <iframe
                     width="100%"
                     height="100%"
@@ -177,7 +177,7 @@ export default function Home() {
                     title="BeFin Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    className="w-full h-full min-h-[200px] md:min-h-[300px]"
+                    className="w-full h-full min-h-[200px] md:min-h-[350px]"
                   ></iframe>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function Home() {
       <section className="py-16 bg-[aliceblue] flex items-center min-h-[80vh]">
         <div className="mx-auto px-4 sm:px-8 w-full">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-left mb-4 md:mb-6" data-aos="fade-up">
-            Finance for Every Age. Every Stage.
+            Finance for <br className='block md:hidden'/> Every Age. Every Stage.
           </h2>
           <p
             className="text-base md:text-lg lg:text-xl text-gray-700 text-left max-w-2xl md:max-w-3xl mb-7 md:mb-12 leading-relaxed"
@@ -230,7 +230,7 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 mt-0 pr-12 md:pr-16">For <br /> <span className='text-3xl'>Parents</span></h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 mt-0 pr-12 md:pr-16">By <br /> <span className='text-3xl'>Parents</span></h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Set allowances, track spending, and guide your child&apos;s financial growth.
                 </p>
@@ -248,9 +248,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 mt-0 pr-12 md:pr-16">For <br /> <span className='text-3xl'>Professionals</span></h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 md:mb-4 mt-0 pr-12 md:pr-16">To <br /> <span className='text-3xl'>Professionals</span></h3>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Budget better, save consistently, and invest wisely with AI-driven tools.
+                  Budget better, save consistently, and invest wisely with AI driven tools.
                 </p>
               </div>
             </div>
@@ -335,26 +335,46 @@ export default function Home() {
               </div>
             </div>
             {/* Right Section - Marketing Content */}
-            <div className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]">
-              <p className="text-lg lg:text-2xl text-[#2563eb] font-medium">
+            <div
+              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[10vh]"
+              data-aos="fade-up"
+            >
+              <p
+                className="text-lg lg:text-2xl text-[#2563eb] font-medium"
+                data-aos="fade-up"
+              >
                 Level Up Game
               </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">
+              <h2
+                className="text-3xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text"
+                data-aos="fade-up"
+              >
                 Learn Money the Fun Way
               </h2>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg">
+              <p
+                className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-lg"
+                data-aos="fade-up"
+              >
                 Play interactive challenges, earn rewards, and master real-world financial skills - all in one gamified journey.
               </p>
-              <p className="text-lg font-medium text-gray-900">Turn learning into earning.</p>
-              <div className="flex gap-3 items-center text-base sm:text-lg justify-start text-[#2563eb] my-6">
+              <p
+                className="text-lg font-medium text-gray-900"
+                data-aos="fade-up"
+              >Turn learning into earning.</p>
+              <div
+                className="flex gap-3 items-center text-base sm:text-lg justify-start text-[#2563eb] my-6"
+                data-aos="fade-up"
+              >
                 <span className="font-medium">Fun</span>
                 <span className="opacity-70">|</span>
                 <span className="font-medium">Rewarding</span>
                 <span className="opacity-70">|</span>
                 <span className="font-medium">Educational</span>
               </div>
-              <Link href="/game" passHref >
-                <button className="bg-[#2563eb] text-white border-none px-8 py-3 lg:py-4 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-[#1d4ed8] hover:shadow-lg w-full sm:w-auto">
+              <Link href="/game" passHref>
+                <button className="bg-[#2563eb] text-white border-none px-8 py-3 lg:py-4 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-[#1d4ed8] hover:shadow-lg w-full sm:w-auto"
+                  data-aos="fade-up"
+                >
                   Start your challenge now!
                 </button>
               </Link>
@@ -397,26 +417,48 @@ export default function Home() {
               </div>
             </div>
             {/* Left Section - Marketing Content (now comes last on large screens) */}
-            <div className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 lg:px-8 lg:max-w-full lg:translate-x-[10vh]">
-              <p className="text-lg lg:text-2xl text-[#2563eb] font-medium">
+            <div
+              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 lg:px-8 lg:max-w-full lg:translate-x-[10vh]"
+              data-aos="fade-up"
+            >
+              <p
+                className="text-lg lg:text-2xl text-[#2563eb] font-medium"
+                data-aos="fade-up"
+              >
                 Market Simulator
               </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">
+              <h2
+                className="text-3xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text"
+                data-aos="fade-up"
+              >
                 Trade. Compete. Learn.
               </h2>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl w-full">
+              <p
+                className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl w-full"
+                data-aos="fade-up"
+              >
                 Step into a real market experience - build virtual portfolios, join trading contests, and get AI insights.
               </p>
-              <p className="text-lg font-medium text-gray-900">Learn to invest before you invest.</p>
-              <div className="flex gap-3 items-center text-base sm:text-lg justify-start text-[#2563eb] my-6">
+              <p
+                className="text-lg font-medium text-gray-900"
+                data-aos="fade-up"
+              >
+                Learn to invest before you invest.
+              </p>
+              <div
+                className="flex gap-3 items-center text-base sm:text-lg justify-start text-[#2563eb] my-6"
+                data-aos="fade-up"
+              >
                 <span className="font-medium">Real Data</span>
                 <span className="opacity-70">|</span>
                 <span className="font-medium">Zero Risk</span>
                 <span className="opacity-70">|</span>
                 <span className="font-medium">AI Guided</span>
               </div>
-              <Link href="/services" passHref >
-                <button className="bg-[#2563eb] text-white border-none px-8 py-3 lg:py-4 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-[#1d4ed8] hover:shadow-lg w-full sm:w-auto">
+              <Link href="/services" passHref>
+                <button className="bg-[#2563eb] text-white border-none px-8 py-3 lg:py-4 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-[#1d4ed8] hover:shadow-lg w-full sm:w-auto"
+                  data-aos="fade-up"
+                >
                   Explore the Simulator
                 </button>
               </Link>
