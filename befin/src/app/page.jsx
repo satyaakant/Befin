@@ -169,7 +169,7 @@ export default function Home() {
               
               {/* Video Section */}
               <div className="mt-4 sm:mt-10">
-                <div className="rounded-xl overflow-hidden shadow-lg aspect-video w-full max-w-2xl min-h-[200px] md:min-h-[350px]">
+                <div className="rounded-xl overflow-hidden shadow-lg aspect-video w-full max-w-2xl min-h-[200px] md:min-h-[300px]">
                   <iframe
                     width="100%"
                     height="100%"
@@ -177,7 +177,7 @@ export default function Home() {
                     title="BeFin Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    className="w-full h-full min-h-[200px] md:min-h-[350px]"
+                    className="w-full h-full min-h-[200px] md:min-h-[300px]"
                   ></iframe>
                 </div>
               </div>

@@ -34,7 +34,7 @@ function PartnerMarquee() {
   ];
 
   return (
-    <div className="w-full overflow-x-hidden py-2 mb-8">
+    <div className="w-full overflow-x-hidden py-8 mb-8">
       <div className="relative">
         <div className="partner-marquee-track flex gap-24 text-2xl md:text-3xl items-center whitespace-nowrap font-semibold select-none">
           {Array.from({ length: 6 }).map((_, loopIndex) =>
@@ -235,12 +235,12 @@ export default function AboutUs() {
       </section>
       
       {/* Our Team & Trusted Financial Partners Section */}
-      <section className="py-20 bg-white relative">
+      <section className="py-20 bg-[aliceblue] relative">
         <div className="mx-auto px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-2 text-center md:text-left" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-6 text-center" data-aos="fade-up">
             Meet the Team & Trusted Partners
           </h2>
-          <p className="text-lg text-gray-700 mx-auto mb-10 text-center md:text-left mb-12" data-aos="fade-up" data-aos-delay="100">
+          <p className="text-lg text-gray-700 mx-auto mb-10 text-center mb-12" data-aos="fade-up" data-aos-delay="100">
             BeFin is powered by a passionate, multidisciplinary team and guided by industry leaders in the fintech and education domains. <br className='hidden md:block' /> Our trusted financial and educational partners help us deliver top-tier financial education and real-world solutions to learners and families across India.
           </p>
           {/* Team Grid */}
@@ -313,7 +313,7 @@ export default function AboutUs() {
           {/* Infinite Text Marquee */}
           <PartnerMarquee />
 
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-700 text-center max-w-5xl mx-auto leading-relaxed">
             We are proud to collaborate with leading financial institutions and educational organizations across India. These partnerships enable us to deliver comprehensive financial education and innovative payment solutions to millions of users nationwide.
           </p>
         </div>
