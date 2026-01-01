@@ -26,21 +26,21 @@ export default function Contact() {
       <Script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" strategy="afterInteractive" />
       
       <section className="pb-16 md:pb-0 flex items-center bg-[aliceblue] w-full">
-        <div className="w-full px-4 sm:px-8">
+        <div className="w-full px-4 md:px-8">
           <motion.div
-            className="max-w-6xl mx-auto py-14 sm:py-16"
+            className="max-w-9xl mx-auto py-14 sm:py-16"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="text-lg lg:text-xl text-[#2563eb] font-medium">
-              We're here to help.
+              We’d love to hear from you! 
             </p>
             <h1 className="mt-2 text-3xl lg:text-5xl font-semibold leading-tight bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text">
               Contact Us
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
-              Reach out for partnerships, product questions, or support. We'll get back to you as soon as possible.
+            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-5xl">
+              Whether it's a question, feedback, or a partnership inquiry, our dedicated team is here to assist you. Expect a prompt response within 24 hours.
             </p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
