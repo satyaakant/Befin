@@ -204,11 +204,12 @@ export default function Home() {
             <div className="bg-white p-6 sm:p-7 md:p-8 rounded-2xl relative shadow-md transition-all hover:-translate-y-2 hover:shadow-xl text-left flex flex-col justify-center min-h-[220px] md:min-h-[260px]" data-aos="fade-up" data-aos-delay="200">
               {/* Image Top Right */}
               <div className="absolute top-0 right-0 w-48 h-24 pointer-events-none select-none leading-[1]">
-                <img
+                <Image
                   src="/home/students.png"
                   alt="Students icon"
+                  fill
                   className="w-full h-full object-cover rounded-bl-full"
-                  draggable="false"
+                  draggable={false}
                 />
               </div>
               <div>
@@ -222,11 +223,12 @@ export default function Home() {
             <div className="bg-white p-6 sm:p-7 md:p-8 rounded-2xl relative shadow-md transition-all hover:-translate-y-2 hover:shadow-xl text-left flex flex-col justify-center min-h-[220px] md:min-h-[260px]" data-aos="fade-up" data-aos-delay="300">
               {/* Image Top Right */}
               <div className="absolute top-0 right-0 w-48 h-24 pointer-events-none select-none leading-[1]">
-                <img
+                <Image
                   src="/home/parents.png"
                   alt="Parents icon"
+                  fill
                   className="w-full h-full object-cover rounded-bl-full"
-                  draggable="false"
+                  draggable={false}
                 />
               </div>
               <div>
@@ -240,11 +242,12 @@ export default function Home() {
             <div className="bg-white p-6 sm:p-7 md:p-8 rounded-2xl relative shadow-md transition-all hover:-translate-y-2 hover:shadow-xl text-left flex flex-col justify-center min-h-[220px] md:min-h-[260px]" data-aos="fade-up" data-aos-delay="300">
               {/* Image Top Right */}
               <div className="absolute top-0 right-0 w-48 h-24 pointer-events-none select-none leading-[1]">
-                <img
+                <Image
                   src="/home/professionals.png"
                   alt="Professionals icon"
+                  fill
                   className="w-full h-full object-cover rounded-bl-full"
-                  draggable="false"
+                  draggable={false}
                 />
               </div>
               <div>
@@ -260,45 +263,47 @@ export default function Home() {
 
       {/* Smart Card Section as Banner */}
       <section
-        className="relative flex items-center justify-center py-32 overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] bg-[aliceblue]"
+        className="relative flex items-center justify-center py-24 overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px]"
         style={{
-          background: "linear-gradient(120deg,#e0f2fe 10%,#dbeafe 100%)"
+          background: "linear-gradient(120deg,#141a29 60%,#24304a 100%)"
         }}
       >
         {/* Banner background image */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <img
+          <Image
             src="/home/banner.png"
             alt=""
-            className="object-cover w-full h-full opacity-30"
+            fill
+            className="object-cover w-full h-full opacity-10"
             style={{ pointerEvents: "none", userSelect: "none" }}
+            priority={false}
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#e0f2fe] mix-blend-lighten opacity-30"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#162036] via-transparent to-[#2e4160] opacity-20"></div>
         </div>
         {/* TEXT CONTENT OVER IMAGE */}
         <div className="relative z-10 max-w-3xl w-full mx-auto px-5 sm:px-8 text-center" data-aos="fade-up">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#2563eb] drop-shadow-lg mb-5">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-5">
             Smart Card
           </h2>
-          <p className="text-2xl sm:text-4xl font-semibold text-[#30a5fa] mb-3">Spend Smarter | Stay in Control</p>
-          <p className="text-lg sm:text-xl md:text-3xl text-gray-700 leading-relaxed mb-4">
+          <p className="text-2xl sm:text-4xl font-semibold text-[#61caff] mb-3">Spend Smarter | Stay in Control</p>
+          <p className="text-lg sm:text-xl md:text-3xl text-gray-200 leading-relaxed mb-4">
             Make everyday payments easy, safe and fun with your own &nbsp;
-            <span className="bg-gradient-to-r from-[#30a5fa] via-[#2563eb] to-[#38bdf8] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#38bdf8] via-[#5eead4] to-[#f0fdfa] bg-clip-text text-transparent">
               BeFin Smart Card
             </span>
             , built for all ages.
           </p>
-          <p className="text-base sm:text-xl text-gray-800 font-medium mb-6">Track, Tap and Manage Effortlessly.</p>
-          <div className="flex gap-3 items-center text-base sm:text-lg justify-center text-[#2563eb] mb-8">
+          <p className="text-base sm:text-xl text-gray-300 font-medium mb-6">Track, Tap and Manage Effortlessly.</p>
+          <div className="flex gap-3 items-center text-base sm:text-lg justify-center text-[#9cd2ff] mb-14">
             <span className="font-medium">Secure</span>
-            <span className="opacity-70">|</span>
+            <span className="opacity-50">&bull;</span>
             <span className="font-medium">Fast</span>
-            <span className="opacity-70">|</span>
+            <span className="opacity-50">&bull;</span>
             <span className="font-medium">Prepaid</span>
           </div>
-          <Link href="/services" passHref >
-            <button className="bg-[#2563eb] text-white px-5 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105 shadow-md border-none">
-              Get your BeFin Card now →
+          <Link href="/services" passHref>
+            <button className="bg-[#2563eb] text-white px-8 py-3 rounded-full text-base font-semibold transition-transform hover:scale-105 shadow hover:shadow-xl border-none">
+              Get your BeFin Card →
             </button>
           </Link>
         </div>
@@ -418,7 +423,7 @@ export default function Home() {
             </div>
             {/* Left Section - Marketing Content (now comes last on large screens) */}
             <div
-              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 lg:px-8 lg:max-w-full lg:translate-x-[10vh]"
+              className="my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2 px-4 lg:px-8 lg:max-w-full lg:translate-x-[2vh]"
               data-aos="fade-up"
             >
               <p
