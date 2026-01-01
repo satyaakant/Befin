@@ -4,78 +4,6 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-// Partner logo mapping
-const partnerLogos = {
-  "NPCI": "/about/npci.webp",
-  "Yes Bank": "/about/yesbank.png",
-  "Invertis University": "/about/invertis.jpg",
-};
-
-function PartnerMarquee() {
-  const partners = [
-    {
-      name: "NPCI",
-      style: "text-[#2563eb] font-bold",
-      logo: partnerLogos["NPCI"],
-      logoAlt: "NPCI Logo"
-    },
-    {
-      name: "Yes Bank",
-      style: "text-[#1a237e] font-bold",
-      logo: partnerLogos["Yes Bank"],
-      logoAlt: "Yes Bank Logo"
-    },
-    {
-      name: "Invertis University",
-      style: "text-green-800 font-bold",
-      logo: partnerLogos["Invertis University"],
-      logoAlt: "Invertis University Logo"
-    },
-  ];
-
-  return (
-    <div className="w-full overflow-x-hidden py-8 mb-8">
-      <div className="relative">
-        <div className="partner-marquee-track flex gap-24 text-2xl md:text-3xl items-center whitespace-nowrap font-semibold select-none">
-          {Array.from({ length: 6 }).map((_, loopIndex) =>
-            partners.map((partner, idx) => (
-              <span key={`marquee-${loopIndex}-${idx}`} className={`flex items-center gap-3 ${partner.style}`}>
-                {/* Show logo in front of name. Uses next/image for optimal loading. Fallback to <img> if needed. */}
-                {partner.logo ? (
-                  <span className="inline-block w-20 h-10 align-middle relative">
-                    <Image
-                      src={partner.logo}
-                      alt={partner.logoAlt}
-                      fill
-                      className="bg-white object-cover"
-                      draggable={false}
-                    />
-                  </span>
-                ) : (
-                  <span className="inline-block w-9 h-9 md:w-11 md:h-11 align-middle rounded-full bg-gray-200" />
-                )}
-                <span>{partner.name}</span>
-              </span>
-            ))
-          )}
-        </div>
-        <style jsx global>{`
-          @keyframes infinite-marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-          }
-
-          .partner-marquee-track {
-            animation: infinite-marquee 30s linear infinite;
-            min-width: max-content;
-            will-change: transform;
-          }
-        `}</style>
-      </div>
-    </div>
-  );
-}
-
 export default function AboutUs() {
   return (
     <>
@@ -113,7 +41,7 @@ export default function AboutUs() {
               </div>
             </div>
             {/* Right Section - About Us Content */}
-            <div className="text-center lg:text-left my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8 px-1 lg:px-4 lg:max-w-full lg:-translate-x-[12vh]" data-aos="fade-left">
+            <div className="text-center lg:text-left my-4 w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8 px-4 sm:px-6 lg:px-4 lg:max-w-full lg:-translate-x-[12vh]" data-aos="fade-left">
               <h1 className="text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#30a5fa] to-[#2563eb] text-transparent bg-clip-text mb-2">
                 Who are we ?
               </h1>
@@ -146,7 +74,7 @@ export default function AboutUs() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/90" />
         </div>
 
-        <div className="relative z-10 mx-auto px-6 md:px-10">
+        <div className="relative z-10 mx-auto px-4 sm:px-6 md:px-10">
           {/* Header */}
           <div className="text-left md:text-left mx-auto mb-10 flex flex-col items-start md:items-start">
             <h2
@@ -236,7 +164,7 @@ export default function AboutUs() {
       
       {/* Our Team & Trusted Financial Partners Section */}
       <section className="py-20 bg-[aliceblue] relative">
-        <div className="mx-auto px-8">
+        <div className="mx-auto px-4 sm:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2563eb] mb-6 text-center" data-aos="fade-up">
             Meet the Team & Trusted Partners
           </h2>
@@ -309,9 +237,6 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-
-          {/* Infinite Text Marquee */}
-          <PartnerMarquee />
 
           <p className="text-lg text-gray-700 text-center max-w-5xl mx-auto leading-relaxed">
             We are proud to collaborate with leading financial institutions and educational organizations across India. These partnerships enable us to deliver comprehensive financial education and innovative payment solutions to millions of users nationwide.

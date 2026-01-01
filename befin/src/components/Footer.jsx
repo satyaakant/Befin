@@ -48,7 +48,7 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-gray-200 bg-white z-[1000] py-8">
-      <div className="max-w-9xl mx-auto px-8 py-6">
+      <div className="max-w-9xl mx-auto px-4 sm:px-8 py-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
